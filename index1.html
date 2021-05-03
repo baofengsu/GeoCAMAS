@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+	html {height: 100%}
+	body {height: 100%}
+	#map {height: 100%;}
+	</style>
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	
+
+  
+</head>
+<body onload="init()">
+	<div id="map"></div>
+
+
+
+    <script type="text/javascript">
+        //make map a global variable
+        var map;
+    
+        function init(){
+            map = L.map('map').setView([34.06949867805522, 106.800], 5);
+    
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+            L.marker([34.28, 108.07]).addTo(map)
+             .bindPopup('我在这里.<br> 欢迎各地的朋友.')
+             .openPopup();
+        }
+    </script>
+
+
+   
+	<!-- jquery  -->		
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

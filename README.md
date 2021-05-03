@@ -1,2 +1,3 @@
 # GeoCAMAS
-进行第一次测试
+index.html  最小动态网页
+index.html leaflet 加载地图
